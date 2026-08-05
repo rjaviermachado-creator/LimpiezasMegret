@@ -11,7 +11,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Limpiezas Megret, inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a>
-    <nav><a href="#servicios">Servicios</a><a href="#tienda">Tienda</a><a href="#funciona">Cómo funciona</a><a href="#trabajo">Empleo</a></nav>
+    <nav><a href="#servicios">Servicios</a><a href="#tienda">Tienda</a><a href="#consejos">Consejos</a><a href="#funciona">Cómo funciona</a><a href="#trabajo">Empleo</a></nav>
     <div class="header-actions"><button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrito">🛒 <b id="cart-count">0</b></button><button class="pill dark js-maria" type="button">Hablar con María</button></div>
   </header>
 
@@ -66,6 +66,21 @@
       <p class="pack-note">Las imágenes muestran los packs de forma orientativa. Contenido, marcas, unidades, disponibilidad y precio se confirman antes de cerrar el pedido.</p>
     </section>
 
+    <section class="tips-section" id="consejos">
+      <header class="tips-head"><div><span class="tips-kicker">TRUCOS MEGRET · PARA EL DÍA A DÍA</span><h2>Pequeños hábitos.<br><em>Gran diferencia.</em></h2></div><p>Una mini guía práctica para limpiar con más orden, cuidar las superficies y trabajar con seguridad.</p></header>
+      <div class="tips-grid">
+        <article class="tip-card tip-safety"><span class="tip-number">01 · SEGURIDAD</span><b>Los productos no hacen mejor equipo por mezclarlos.</b><p>No mezcles lejía con amoniaco, ácidos/vinagre ni otros limpiadores. Ventila, sigue la etiqueta y respeta la dosis y el tiempo de contacto indicados por el fabricante.</p><i>🧴</i></article>
+        <article class="tip-card"><span class="tip-number">02</span><b>De arriba hacia abajo</b><p>Empieza por estantes y superficies altas y termina por el suelo. Así evitas ensuciar dos veces lo que ya estaba listo.</p><i>⬇️</i></article>
+        <article class="tip-card tip-yellow"><span class="tip-number">03</span><b>Un color, una zona</b><p>Separa las bayetas del baño, la cocina y el resto de la casa. Un código de colores sencillo ayuda a no confundirlas.</p><i>🟨</i></article>
+        <article class="tip-card tip-photo"><img src="assets/limpieza-suelo.jpg" alt="Limpieza cuidadosa de un suelo"><div><span class="tip-number">04</span><b>Primero ordena. Luego limpia.</b><p>Retira objetos y despeja la superficie antes de empezar. Ganarás espacio de trabajo y verás mejor lo que necesita atención.</p></div></article>
+        <article class="tip-card tip-mint"><span class="tip-number">05</span><b>Menos producto, mejor control</b><p>Usa la cantidad que marque la etiqueta. Echar más no significa limpiar mejor y puede dejar residuos innecesarios.</p><i>🫧</i></article>
+        <article class="tip-card"><span class="tip-number">06</span><b>Cristales sin carreras</b><p>Trabaja por zonas, con una microfibra limpia y sin empapar. Repasa los bordes al final para un acabado uniforme.</p><i>✨</i></article>
+        <article class="tip-card tip-dark"><span class="tip-number">07 · ALOJAMIENTOS</span><b>La checklist gana</b><p>En hoteles y apartamentos, usa siempre el mismo recorrido: cama, baño, superficies, reposición y revisión final.</p><i>✓</i></article>
+        <article class="tip-card"><span class="tip-number">08</span><b>Superficie nueva: prueba primero</b><p>Antes de usar un producto en piedra, madera o acabados delicados, revisa la etiqueta y prueba en una zona poco visible.</p><i>🔎</i></article>
+      </div>
+      <p class="tips-note">Consejo Megret: ante una duda con un producto, manda una foto de la etiqueta a María antes de usarlo.</p>
+    </section>
+
     <section class="how" id="funciona">
       <div class="how-photo"><img src="assets/limpieza-cristal.jpg" alt="Limpieza profesional"><span><b>HECHO CON CUIDADO</b> La diferencia está en los detalles.</span></div>
       <div class="how-copy"><span class="eyebrow">MUY FÁCIL</span><h2>Cuéntanos.<br>Nos organizamos.<br><em>Y a limpiar.</em></h2>
@@ -86,21 +101,25 @@
 
     <section class="quote" id="presupuesto">
       <div><span class="eyebrow light">SOLICITA PRESUPUESTO</span><h2>¿Cuántas horas<br><em>necesitas?</em></h2><p>No hace falta que lo sepas exacto. Danos una idea y María te ayuda a organizar el servicio.</p>
-        <div class="maria"><span>M</span><div><b>María</b><small>Responsable de Limpiezas Megret</small></div><button class="js-maria" type="button">Hablar ahora</button></div>
+        <div class="maria"><span>M</span><div><b>María</b><small>WhatsApp · +34 641 16 71 55</small></div><button class="js-maria" type="button">Hablar ahora</button></div>
       </div>
       <form id="quote-form">
+        <div class="form-heading"><span>🧽</span><div><b>Cuéntale a María qué necesitas</b><small>Te preparamos el mensaje completo.</small></div></div>
+        <div class="form-row"><label>¿Quién contrata?<select name="clientType" required><option value="">Elige una opción</option><option>Particular</option><option>Empresa</option><option>Hotel / hostal</option><option>Administrador / comunidad</option></select></label><label>Nombre / empresa<input name="clientName" required placeholder="Tu nombre o empresa"></label></div>
+        <label>Teléfono de contacto<input type="tel" name="phone" required placeholder="Ej. +34 600 000 000" autocomplete="tel"></label>
         <label>¿Qué quieres limpiar?<select name="space" required><option value="">Elige una opción</option><option>Casa o piso</option><option>Hotel</option><option>Hostal</option><option>Piso de estudiantes</option><option>Apartamento / estancia</option><option>Limpieza intensiva</option></select></label>
-        <div class="form-row"><label>Frecuencia<select name="frequency" required><option>Una vez</option><option>Semanal</option><option>Quincenal</option><option>Varias veces al mes</option><option>A convenir</option></select></label><label>Horas<select name="hours" required><option>2 horas</option><option selected>3 horas</option><option>4 horas</option><option>5 horas</option><option>6+ horas</option><option>No lo sé</option></select></label></div>
-        <label>Zona de Madrid<input name="zone" required placeholder="Ej. Aluche, Centro, Carabanchel..."></label>
-        <label>Cuéntanos un poco más<textarea name="details" rows="4" placeholder="Tamaño, zonas, fecha aproximada..."></textarea></label>
-        <button class="submit" type="submit">Preparar solicitud para María →</button>
-        <small>Sin compromiso. Confirmaremos contigo los detalles antes de organizar el servicio.</small>
+        <div class="form-row"><label>Tamaño aproximado<select name="size"><option>No lo sé</option><option>Menos de 50 m²</option><option>50–90 m²</option><option>90–150 m²</option><option>Más de 150 m²</option><option>Varias habitaciones / zonas</option></select></label><label>Zona de Madrid<input name="zone" required placeholder="Ej. Aluche, Centro, Getafe..."></label></div>
+        <div class="form-row"><label>Frecuencia<select name="frequency" required><option>Una vez</option><option>Semanal</option><option>Quincenal</option><option>Varias veces al mes</option><option>A convenir</option></select></label><label>Horas aproximadas<select name="hours" required><option>2 horas</option><option selected>3 horas</option><option>4 horas</option><option>5 horas</option><option>6+ horas</option><option>No lo sé</option></select></label></div>
+        <div class="form-row"><label>Fecha preferida<input type="date" name="date"></label><label>Productos y material<select name="supplies"><option>Que los lleve Limpiezas Megret</option><option>Ya tengo productos</option><option>A convenir con María</option></select></label></div>
+        <label>Cuéntanos qué necesitas<textarea name="details" rows="4" placeholder="Habitaciones, baños, cocina, mascotas, acceso, necesidades especiales..."></textarea></label>
+        <button class="submit" type="submit">Continuar por WhatsApp con María →</button>
+        <small>Revisarás el mensaje antes de abrir WhatsApp. Sin compromiso.</small>
       </form>
     </section>
 
     <section class="work section" id="trabajo">
       <div class="work-copy"><span class="eyebrow">TRABAJA CON NOSOTROS</span><h2>¿Buscas trabajo<br>de limpieza en <em>Madrid?</em></h2><p>Queremos conocer personas responsables, con ganas de trabajar y cuidar los espacios. Si tienes experiencia, genial. Si estás empezando, también puedes presentarte.</p><ul><li>✓ Cuéntanos tu experiencia</li><li>✓ Indica tu disponibilidad</li><li>✓ Dinos por qué zona de Madrid te mueves</li></ul><img src="assets/material-limpieza.jpg" alt="Material de limpieza preparado"></div>
-      <form id="job-form"><span class="job-tag">👋 HOLA, FUTURO EQUIPO</span><h3>Envíale tu candidatura a María</h3><label>Nombre y apellidos<input name="name" required placeholder="Tu nombre"></label><label>Zona donde vives<input name="area" required placeholder="Ej. Usera, Latina, Getafe..."></label><label>Experiencia<select name="experience"><option>Estoy empezando</option><option>Menos de 1 año</option><option>1–3 años</option><option>Más de 3 años</option></select></label><label>Disponibilidad<textarea name="availability" required rows="4" placeholder="Días, horario y desplazamiento..."></textarea></label><button class="submit dark-submit" type="submit">Quiero trabajar con Megret →</button><small>Tu candidatura irá dirigida a María.</small></form>
+      <form id="job-form"><span class="job-tag">👋 HOLA, FUTURO EQUIPO</span><h3>Envíale tu candidatura a María</h3><div class="form-row"><label>¿Cómo te presentas?<select name="candidateType" required><option>Persona particular</option><option>Autónomo/a</option><option>Empresa / equipo</option></select></label><label>Nombre / equipo<input name="name" required placeholder="Tu nombre"></label></div><label>Teléfono de contacto<input type="tel" name="phone" required placeholder="Ej. +34 600 000 000" autocomplete="tel"></label><div class="form-row"><label>Zona donde vives<input name="area" required placeholder="Ej. Usera, Latina, Getafe..."></label><label>Experiencia<select name="experience"><option>Estoy empezando</option><option>Menos de 1 año</option><option>1–3 años</option><option>Más de 3 años</option></select></label></div><div class="form-row"><label>¿Qué te interesa?<select name="preference"><option>Casas y pisos</option><option>Hoteles / hostales</option><option>Apartamentos</option><option>Me adapto a todo</option></select></label><label>Disponibilidad<select name="availability"><option>Mañanas</option><option>Tardes</option><option>Mañanas y tardes</option><option>Fines de semana</option><option>Flexible / a convenir</option></select></label></div><label>¿Puedes desplazarte por Madrid?<select name="travel"><option>Sí</option><option>Sí, con límites de zona</option><option>No, prefiero mi zona</option></select></label><label>Cuéntale algo más a María<textarea name="details" rows="4" placeholder="Días disponibles, experiencia concreta, zonas a las que puedes ir..."></textarea></label><button class="submit dark-submit" type="submit">Enviar candidatura por WhatsApp →</button><small>Revisarás el mensaje antes de abrir el WhatsApp de María.</small></form>
     </section>
 
     <section class="gallery section">
@@ -117,7 +136,7 @@
     <section class="final"><span>✦ LIMPIEZAS MEGRET · MADRID</span><h2>Menos tiempo limpiando.<br><em>Más tiempo viviendo.</em></h2><button class="pill dark js-maria" type="button">Hablar con María →</button></section>
   </main>
 
-  <footer><a class="brand" href="#inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a><p>Servicios de limpieza por horas en Madrid.</p><div><a href="#servicios">Servicios</a><a href="#presupuesto">Presupuesto</a><a href="#trabajo">Empleo</a></div><small>© <span id="year"></span> Limpiezas Megret</small></footer>
+  <footer><a class="brand" href="#inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a><p>Servicios de limpieza por horas en Madrid · WhatsApp de María: <a href="https://wa.me/34641167155" target="_blank" rel="noopener">+34 641 16 71 55</a></p><div><a href="#servicios">Servicios</a><a href="#consejos">Consejos</a><a href="#presupuesto">Presupuesto</a><a href="#trabajo">Empleo</a></div><small>© <span id="year"></span> Limpiezas Megret</small></footer>
 
   <button class="chat js-maria" type="button" aria-label="Hablar con María">💬 <b>María</b></button>
   <div class="cart-backdrop" id="cart-backdrop" hidden></div>
@@ -127,7 +146,7 @@
     <div class="cart-footer"><p>El precio final se confirma contigo antes del pedido.</p><button id="cart-order" type="button">Pedir estos packs a María →</button></div>
   </aside>
   <div class="modal" id="contact-modal" hidden>
-    <section role="dialog" aria-modal="true" aria-labelledby="contact-title"><button class="close" id="close-contact" type="button" aria-label="Cerrar">×</button><header><span class="avatar">M</span><div><small>CONTACTO DIRECTO</small><h3 id="contact-title">Habla con María</h3><p>Responsable · Limpiezas Megret</p></div></header><label>Tu mensaje<textarea id="contact-message" rows="7">Hola María, me gustaría pedir información sobre Limpiezas Megret.</textarea></label><button class="submit" id="send-contact" type="button">Enviar mensaje a María →</button><p class="notice" id="contact-notice" hidden></p></section>
+    <section role="dialog" aria-modal="true" aria-labelledby="contact-title"><button class="close" id="close-contact" type="button" aria-label="Cerrar">×</button><header><span class="avatar">M</span><div><small>CONTACTO DIRECTO · WHATSAPP</small><h3 id="contact-title">Habla con María</h3><p>+34 641 16 71 55 · Limpiezas Megret</p></div></header><label>Tu mensaje<textarea id="contact-message" rows="9">Hola María, me gustaría pedir información sobre Limpiezas Megret.</textarea></label><button class="submit" id="send-contact" type="button">Abrir WhatsApp de María →</button><p class="notice" id="contact-notice" hidden></p></section>
   </div>
   <script src="app.js?v=1.0"></script>
 </body>

@@ -11,8 +11,8 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Limpiezas Megret, inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a>
-    <nav><a href="#servicios">Servicios</a><a href="#funciona">Cómo funciona</a><a href="#trabajo">Empleo</a></nav>
-    <button class="pill dark js-maria" type="button">Hablar con María</button>
+    <nav><a href="#servicios">Servicios</a><a href="#tienda">Tienda</a><a href="#funciona">Cómo funciona</a><a href="#trabajo">Empleo</a></nav>
+    <div class="header-actions"><button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrito">🛒 <b id="cart-count">0</b></button><button class="pill dark js-maria" type="button">Hablar con María</button></div>
   </header>
 
   <main>
@@ -34,6 +34,12 @@
 
     <div class="ticker">CASAS <b>✦</b> HOTELES <b>✦</b> HOSTALES <b>✦</b> PISOS DE ESTUDIANTES <b>✦</b> LIMPIEZA INTENSIVA <b>✦</b> MADRID</div>
 
+    <section class="jump-zone" aria-label="Accesos rápidos">
+      <a class="jump jump-clean" href="#presupuesto"><span>01</span><b>Necesito limpieza</b><small>Reserva servicio por horas →</small></a>
+      <a class="jump jump-shop" href="#tienda"><span>02</span><b>Quiero productos</b><small>Descubre los Packs Megret →</small></a>
+      <a class="jump jump-work" href="#trabajo"><span>03</span><b>Busco trabajo</b><small>Únete al equipo →</small></a>
+    </section>
+
     <section class="section" id="servicios">
       <header class="section-head"><div><span class="eyebrow">LO QUE HACEMOS</span><h2>Una limpieza para<br><em>cada situación.</em></h2></div><p>No todos los espacios necesitan lo mismo. Cuéntanos qué tienes entre manos y organizamos el servicio por horas que mejor encaje contigo.</p></header>
       <div class="service-grid">
@@ -44,6 +50,20 @@
         <article class="service"><img src="assets/hotel-luz.jpg" alt=""><div><span>🛏️</span><h3>Apartamentos</h3><p>Servicio flexible para alojamientos y viviendas de uso temporal en Madrid.</p></div></article>
         <article class="service"><img src="assets/bano-doble.jpg" alt=""><div><span>✨</span><h3>Baños y cocinas</h3><p>Atención especial a grasa, cal, sanitarios y las superficies que más trabajo requieren.</p></div></article>
       </div>
+    </section>
+
+    <section class="shop-section" id="tienda">
+      <div class="shop-orb orb-a"></div><div class="shop-orb orb-b"></div>
+      <header class="shop-head"><div><span class="shop-kicker">NUEVO · TIENDA MEGRET</span><h2>Limpieza lista<br>para llevar. <em>🫧</em></h2><p>Elige uno o varios packs y prepara tu pedido. María te confirma el contenido final, disponibilidad y precio antes de comprar.</p></div><div class="shop-stamp">PACKS<br><b>MEGRET</b><span>✦</span></div></header>
+      <div class="product-grid">
+        <article class="product featured"><div class="product-img"><img src="assets/packcompleto.jpg" alt="Pack Megret Completo con productos y utensilios de limpieza"><span class="best">MÁS COMPLETO</span></div><div class="product-copy"><span class="product-id">PACK 05</span><h3>Megret Completo</h3><p>Una selección amplia de productos, útiles y accesorios para tener un equipo de limpieza bien preparado.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Megret Completo" type="button">+ Añadir</button></div></div></article>
+        <article class="product"><div class="product-img"><img src="assets/pack1.jpg" alt="Pack Inicio de productos y accesorios de limpieza"></div><div class="product-copy"><span class="product-id">PACK 01</span><h3>Pack Inicio</h3><p>Una selección práctica para arrancar con los esenciales de limpieza del hogar.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Inicio" type="button">+ Añadir</button></div></div></article>
+        <article class="product pop"><div class="product-img"><img src="assets/pack2.jpg" alt="Pack Hogar con cubos, bayetas y productos de limpieza"></div><div class="product-copy"><span class="product-id">PACK 02</span><h3>Pack Hogar</h3><p>Utensilios y productos pensados para mantener distintas zonas de casa listas.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Hogar" type="button">+ Añadir</button></div></div></article>
+        <article class="product"><div class="product-img"><img src="assets/pack3.jpg" alt="Pack Alojamiento con pulverizadores, guantes y accesorios"></div><div class="product-copy"><span class="product-id">PACK 03</span><h3>Pack Alojamiento</h3><p>Una opción cómoda para pisos, apartamentos, habitaciones y pequeños alojamientos.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Alojamiento" type="button">+ Añadir</button></div></div></article>
+        <article class="product liquid"><div class="product-img"><img src="assets/pack4.jpg" alt="Pack Productos con botellas de diferentes limpiadores"></div><div class="product-copy"><span class="product-id">PACK 04</span><h3>Pack Productos</h3><p>Para quienes necesitan reforzar su armario de limpieza con productos de uso habitual.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Productos" type="button">+ Añadir</button></div></div></article>
+      </div>
+      <div class="shop-foot"><span>🛍️ Añade packs al carrito</span><span>💬 Confirma el pedido con María</span><span>📍 Servicio en Madrid</span></div>
+      <p class="pack-note">Las imágenes muestran los packs de forma orientativa. Contenido, marcas, unidades, disponibilidad y precio se confirman antes de cerrar el pedido.</p>
     </section>
 
     <section class="how" id="funciona">
@@ -100,6 +120,12 @@
   <footer><a class="brand" href="#inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a><p>Servicios de limpieza por horas en Madrid.</p><div><a href="#servicios">Servicios</a><a href="#presupuesto">Presupuesto</a><a href="#trabajo">Empleo</a></div><small>© <span id="year"></span> Limpiezas Megret</small></footer>
 
   <button class="chat js-maria" type="button" aria-label="Hablar con María">💬 <b>María</b></button>
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <header><div><small>TIENDA MEGRET</small><h3>Tu carrito 🛒</h3></div><button id="close-cart" type="button" aria-label="Cerrar carrito">×</button></header>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">Todavía no has añadido ningún pack.</p></div>
+    <div class="cart-footer"><p>El precio final se confirma contigo antes del pedido.</p><button id="cart-order" type="button">Pedir estos packs a María →</button></div>
+  </aside>
   <div class="modal" id="contact-modal" hidden>
     <section role="dialog" aria-modal="true" aria-labelledby="contact-title"><button class="close" id="close-contact" type="button" aria-label="Cerrar">×</button><header><span class="avatar">M</span><div><small>CONTACTO DIRECTO</small><h3 id="contact-title">Habla con María</h3><p>Responsable · Limpiezas Megret</p></div></header><label>Tu mensaje<textarea id="contact-message" rows="7">Hola María, me gustaría pedir información sobre Limpiezas Megret.</textarea></label><button class="submit" id="send-contact" type="button">Enviar mensaje a María →</button><p class="notice" id="contact-notice" hidden></p></section>
   </div>

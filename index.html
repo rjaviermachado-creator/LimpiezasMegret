@@ -2,152 +2,92 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Limpiezas Megret: limpieza profesional por horas para casas, pisos, hoteles, hostales y pisos de estudiantes en Madrid.">
-  <meta name="theme-color" content="#0e7b68">
-  <title>Limpiezas Megret | Limpieza por horas en Madrid</title>
-  <link rel="stylesheet" href="styles.css?v=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ff6f91">
+  <meta name="description" content="Limpiezas Megret: limpieza profesional en Madrid con perfil de cliente, pedidos y contacto directo.">
+  <title>Limpiezas Megret · Tu limpieza, más fácil</title>
+  <link rel="stylesheet" href="styles.css?v=3.0">
+  <script defer src="app.js?v=3.0"></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Limpiezas Megret, inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a>
-    <nav><a href="#servicios">Servicios</a><a href="#tienda">Tienda</a><a href="#consejos">Consejos</a><a href="#funciona">Cómo funciona</a><a href="#trabajo">Empleo</a></nav>
-    <div class="header-actions"><button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrito">🛒 <b id="cart-count">0</b></button><button class="pill dark js-maria" type="button">Hablar con María</button></div>
+    <a class="brand" href="#inicio"><span class="brand-mark">LM</span><span><b>Limpiezas</b><strong>Megret</strong></span></a>
+    <button class="menu-button" id="menu-button" type="button" aria-label="Abrir menú">☰</button>
+    <nav id="main-nav"><a href="#servicios">Servicios</a><a href="#como-funciona">Cómo funciona</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a></nav>
+    <div class="header-actions"><button class="icon-button" id="cart-button" type="button" aria-label="Ver pedidos">🛍️ <b id="cart-count">0</b></button><button class="profile-button" id="profile-button" type="button"><span id="profile-avatar">👤</span><b id="profile-label">Crear perfil</b></button></div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
+      <div class="hero-blob blob-a"></div><div class="hero-blob blob-b"></div>
       <div class="hero-copy">
-        <span class="location">● Servicio de limpieza en Madrid</span>
-        <h1>Tu espacio<br>limpio. <em>Tu tiempo,<br>para ti.</em></h1>
-        <p>Contrata limpieza profesional por horas para casas, hoteles, hostales, apartamentos y pisos de estudiantes. Flexible, cercana y sin complicaciones.</p>
-        <div class="actions"><a class="pill yellow" href="#presupuesto">Quiero una limpieza →</a><a class="pill white" href="#trabajo">Busco trabajo ↗</a></div>
-        <div class="trust"><div><b>Por horas</b><small>Tú eliges cuánto necesitas</small></div><div><b>En Madrid</b><small>Servicio cercano y flexible</small></div><div><b>Con María</b><small>Trato directo con la responsable</small></div></div>
+        <span class="badge">✨ Limpieza profesional en Madrid</span>
+        <h1>Tu casa limpia.<br><em>Tu vida más ligera.</em></h1>
+        <p>Reserva una limpieza en pocos minutos, guarda tus datos una sola vez y consulta tus pedidos y conversaciones siempre que vuelvas.</p>
+        <div class="hero-actions"><a class="button primary" href="#reservar">Reservar limpieza →</a><button class="button secondary" id="hero-profile" type="button">Crear mi perfil</button></div>
+        <div class="hero-points"><span>✓ Sin llamadas largas</span><span>✓ Trato directo con María</span><span>✓ Historial guardado</span></div>
       </div>
-      <div class="hero-photo">
-        <img class="main-photo" src="assets/habitacion-hotel.jpg" alt="Habitación limpia y preparada">
-        <img class="small-photo" src="assets/limpieza-cristal.jpg" alt="Profesional realizando una limpieza">
-        <span class="sun">LIMPIO<br>Y LISTO ✦</span>
-        <span class="photo-note">🫧 Nos adaptamos a tu espacio y tus horas</span>
+      <div class="hero-visual">
+        <img class="hero-main" src="assets/habitacion-hotel.jpg" alt="Habitación limpia y preparada">
+        <img class="hero-small" src="assets/limpieza-cristal.jpg" alt="Profesional limpiando un cristal">
+        <div class="floating-card"><span>🫧</span><div><b>Reserva sencilla</b><small>Cuéntanos qué necesitas</small></div></div>
+        <div class="rating-card"><b>4,9 ★</b><small>Atención cercana</small></div>
       </div>
     </section>
 
-    <div class="ticker">CASAS <b>✦</b> HOTELES <b>✦</b> HOSTALES <b>✦</b> PISOS DE ESTUDIANTES <b>✦</b> LIMPIEZA INTENSIVA <b>✦</b> MADRID</div>
-
-    <section class="jump-zone" aria-label="Accesos rápidos">
-      <a class="jump jump-clean" href="#presupuesto"><span>01</span><b>Necesito limpieza</b><small>Reserva servicio por horas →</small></a>
-      <a class="jump jump-shop" href="#tienda"><span>02</span><b>Quiero productos</b><small>Descubre los Packs Megret →</small></a>
-      <a class="jump jump-work" href="#trabajo"><span>03</span><b>Busco trabajo</b><small>Únete al equipo →</small></a>
+    <section class="quick-actions">
+      <button class="quick pink" data-scroll="#reservar"><span>01</span><b>Necesito limpieza</b><small>Solicitar presupuesto →</small></button>
+      <button class="quick mint" id="quick-profile"><span>02</span><b>Mi espacio</b><small>Pedidos y mensajes →</small></button>
+      <button class="quick yellow" data-scroll="#trabajo"><span>03</span><b>Busco trabajo</b><small>Enviar candidatura →</small></button>
     </section>
 
     <section class="section" id="servicios">
-      <header class="section-head"><div><span class="eyebrow">LO QUE HACEMOS</span><h2>Una limpieza para<br><em>cada situación.</em></h2></div><p>No todos los espacios necesitan lo mismo. Cuéntanos qué tienes entre manos y organizamos el servicio por horas que mejor encaje contigo.</p></header>
+      <header class="section-heading"><div><span class="eyebrow">SERVICIOS</span><h2>Una solución para<br><em>cada espacio.</em></h2></div><p>Servicios flexibles para hogares, alojamientos y empresas. Elige lo que necesitas y nosotros te ayudamos con las horas.</p></header>
       <div class="service-grid">
-        <article class="service"><img src="assets/bano-blanco.jpg" alt=""><div><span>🏠</span><h3>Casas y pisos</h3><p>Limpieza por horas, puntual o recurrente para que tu casa vuelva a respirar.</p></div></article>
-        <article class="service"><img src="assets/habitacion-doble.jpg" alt=""><div><span>🏨</span><h3>Hoteles y hostales</h3><p>Habitaciones, baños y zonas comunes preparados para recibir a tus huéspedes.</p></div></article>
-        <article class="service"><img src="assets/piso-desordenado.jpg" alt=""><div><span>🎓</span><h3>Pisos de estudiantes</h3><p>Puestas a punto, cambios de inquilino y limpiezas cuando el piso necesita un reinicio.</p></div></article>
-        <article class="service"><img src="assets/limpieza-suelo.jpg" alt=""><div><span>🧽</span><h3>Limpieza intensiva</h3><p>Para cocinas, baños y espacios que necesitan una intervención más profunda.</p></div></article>
-        <article class="service"><img src="assets/hotel-luz.jpg" alt=""><div><span>🛏️</span><h3>Apartamentos</h3><p>Servicio flexible para alojamientos y viviendas de uso temporal en Madrid.</p></div></article>
-        <article class="service"><img src="assets/bano-doble.jpg" alt=""><div><span>✨</span><h3>Baños y cocinas</h3><p>Atención especial a grasa, cal, sanitarios y las superficies que más trabajo requieren.</p></div></article>
+        <article class="service-card coral"><img src="assets/bano-blanco.jpg" alt="Baño limpio"><div><span>🏠</span><h3>Casas y pisos</h3><p>Limpieza puntual o recurrente adaptada a tu rutina.</p></div></article>
+        <article class="service-card violet"><img src="assets/habitacion-doble.jpg" alt="Habitación de hotel"><div><span>🏨</span><h3>Hoteles y hostales</h3><p>Habitaciones y zonas comunes listas para recibir huéspedes.</p></div></article>
+        <article class="service-card green"><img src="assets/limpieza-suelo.jpg" alt="Limpieza de suelo"><div><span>🧽</span><h3>Limpieza intensiva</h3><p>Para cocinas, baños, mudanzas y puestas a punto.</p></div></article>
+        <article class="service-card blue"><img src="assets/piso-desordenado.jpg" alt="Piso para limpiar"><div><span>🎓</span><h3>Pisos de estudiantes</h3><p>Cambios de inquilino y limpiezas completas.</p></div></article>
       </div>
     </section>
 
-    <section class="shop-section" id="tienda">
-      <div class="shop-orb orb-a"></div><div class="shop-orb orb-b"></div>
-      <header class="shop-head"><div><span class="shop-kicker">NUEVO · TIENDA MEGRET</span><h2>Limpieza lista<br>para llevar. <em>🫧</em></h2><p>Elige uno o varios packs y prepara tu pedido. María te confirma el contenido final, disponibilidad y precio antes de comprar.</p></div><div class="shop-stamp">PACKS<br><b>MEGRET</b><span>✦</span></div></header>
-      <div class="product-grid">
-        <article class="product featured"><div class="product-img"><img src="assets/packcompleto.jpg" alt="Pack Megret Completo con productos y utensilios de limpieza"><span class="best">MÁS COMPLETO</span></div><div class="product-copy"><span class="product-id">PACK 05</span><h3>Megret Completo</h3><p>Una selección amplia de productos, útiles y accesorios para tener un equipo de limpieza bien preparado.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Megret Completo" type="button">+ Añadir</button></div></div></article>
-        <article class="product"><div class="product-img"><img src="assets/pack1.jpg" alt="Pack Inicio de productos y accesorios de limpieza"></div><div class="product-copy"><span class="product-id">PACK 01</span><h3>Pack Inicio</h3><p>Una selección práctica para arrancar con los esenciales de limpieza del hogar.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Inicio" type="button">+ Añadir</button></div></div></article>
-        <article class="product pop"><div class="product-img"><img src="assets/pack2.jpg" alt="Pack Hogar con cubos, bayetas y productos de limpieza"></div><div class="product-copy"><span class="product-id">PACK 02</span><h3>Pack Hogar</h3><p>Utensilios y productos pensados para mantener distintas zonas de casa listas.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Hogar" type="button">+ Añadir</button></div></div></article>
-        <article class="product"><div class="product-img"><img src="assets/pack3.jpg" alt="Pack Alojamiento con pulverizadores, guantes y accesorios"></div><div class="product-copy"><span class="product-id">PACK 03</span><h3>Pack Alojamiento</h3><p>Una opción cómoda para pisos, apartamentos, habitaciones y pequeños alojamientos.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Alojamiento" type="button">+ Añadir</button></div></div></article>
-        <article class="product liquid"><div class="product-img"><img src="assets/pack4.jpg" alt="Pack Productos con botellas de diferentes limpiadores"></div><div class="product-copy"><span class="product-id">PACK 04</span><h3>Pack Productos</h3><p>Para quienes necesitan reforzar su armario de limpieza con productos de uso habitual.</p><div class="product-bottom"><strong>Consultar precio</strong><button class="add-pack" data-pack="Pack Productos" type="button">+ Añadir</button></div></div></article>
-      </div>
-      <div class="shop-foot"><span>🛍️ Añade packs al carrito</span><span>💬 Confirma el pedido con María</span><span>📍 Servicio en Madrid</span></div>
-      <p class="pack-note">Las imágenes muestran los packs de forma orientativa. Contenido, marcas, unidades, disponibilidad y precio se confirman antes de cerrar el pedido.</p>
+    <section class="feature-band" id="como-funciona">
+      <div class="feature-image"><img src="assets/limpieza-cristal.jpg" alt="Servicio de limpieza profesional"><span>Hecho con cuidado ✦</span></div>
+      <div class="feature-copy"><span class="eyebrow">MUY FÁCIL</span><h2>Tres pasos.<br><em>Cero complicaciones.</em></h2><ol><li><b>1</b><div><strong>Crea un perfil rápido</strong><small>Nombre, teléfono y dirección. Solo tendrás que escribirlos una vez.</small></div></li><li><b>2</b><div><strong>Pide tu limpieza</strong><small>Indica el espacio, la fecha y los detalles importantes.</small></div></li><li><b>3</b><div><strong>Sigue todo desde tu espacio</strong><small>Consulta solicitudes, pedidos y mensajes anteriores.</small></div></li></ol><button class="text-button" id="feature-profile" type="button">Abrir mi espacio →</button></div>
     </section>
 
-    <section class="tips-section" id="consejos">
-      <header class="tips-head"><div><span class="tips-kicker">TRUCOS MEGRET · PARA EL DÍA A DÍA</span><h2>Pequeños hábitos.<br><em>Gran diferencia.</em></h2></div><p>Una mini guía práctica para limpiar con más orden, cuidar las superficies y trabajar con seguridad.</p></header>
-      <div class="tips-grid">
-        <article class="tip-card tip-safety"><span class="tip-number">01 · SEGURIDAD</span><b>Los productos no hacen mejor equipo por mezclarlos.</b><p>No mezcles lejía con amoniaco, ácidos/vinagre ni otros limpiadores. Ventila, sigue la etiqueta y respeta la dosis y el tiempo de contacto indicados por el fabricante.</p><i>🧴</i></article>
-        <article class="tip-card"><span class="tip-number">02</span><b>De arriba hacia abajo</b><p>Empieza por estantes y superficies altas y termina por el suelo. Así evitas ensuciar dos veces lo que ya estaba listo.</p><i>⬇️</i></article>
-        <article class="tip-card tip-yellow"><span class="tip-number">03</span><b>Un color, una zona</b><p>Separa las bayetas del baño, la cocina y el resto de la casa. Un código de colores sencillo ayuda a no confundirlas.</p><i>🟨</i></article>
-        <article class="tip-card tip-photo"><img src="assets/limpieza-suelo.jpg" alt="Limpieza cuidadosa de un suelo"><div><span class="tip-number">04</span><b>Primero ordena. Luego limpia.</b><p>Retira objetos y despeja la superficie antes de empezar. Ganarás espacio de trabajo y verás mejor lo que necesita atención.</p></div></article>
-        <article class="tip-card tip-mint"><span class="tip-number">05</span><b>Menos producto, mejor control</b><p>Usa la cantidad que marque la etiqueta. Echar más no significa limpiar mejor y puede dejar residuos innecesarios.</p><i>🫧</i></article>
-        <article class="tip-card"><span class="tip-number">06</span><b>Cristales sin carreras</b><p>Trabaja por zonas, con una microfibra limpia y sin empapar. Repasa los bordes al final para un acabado uniforme.</p><i>✨</i></article>
-        <article class="tip-card tip-dark"><span class="tip-number">07 · ALOJAMIENTOS</span><b>La checklist gana</b><p>En hoteles y apartamentos, usa siempre el mismo recorrido: cama, baño, superficies, reposición y revisión final.</p><i>✓</i></article>
-        <article class="tip-card"><span class="tip-number">08</span><b>Superficie nueva: prueba primero</b><p>Antes de usar un producto en piedra, madera o acabados delicados, revisa la etiqueta y prueba en una zona poco visible.</p><i>🔎</i></article>
-      </div>
-      <p class="tips-note">Consejo Megret: ante una duda con un producto, manda una foto de la etiqueta a María antes de usarlo.</p>
-    </section>
-
-    <section class="how" id="funciona">
-      <div class="how-photo"><img src="assets/limpieza-cristal.jpg" alt="Limpieza profesional"><span><b>HECHO CON CUIDADO</b> La diferencia está en los detalles.</span></div>
-      <div class="how-copy"><span class="eyebrow">MUY FÁCIL</span><h2>Cuéntanos.<br>Nos organizamos.<br><em>Y a limpiar.</em></h2>
-        <ol>
-          <li><b>1</b><div><strong>Dinos qué necesitas</strong><small>Casa, hotel, hostal, piso de estudiantes o limpieza intensiva.</small></div></li>
-          <li><b>2</b><div><strong>Elige horas y frecuencia</strong><small>Una vez, semanal, varias veces al mes o según lo necesites.</small></div></li>
-          <li><b>3</b><div><strong>Habla directamente con María</strong><small>Confirmamos contigo los detalles del servicio.</small></div></li>
-        </ol>
-        <a class="under" href="#presupuesto">Pedir mi limpieza ahora →</a>
-      </div>
-    </section>
-
-    <section class="section hard">
-      <header class="section-head"><div><span class="eyebrow">CUANDO HAY MUCHO QUE HACER</span><h2>Sin dramas.<br><em>Empezamos por algún sitio.</em></h2></div><p>También puedes consultarnos por limpiezas difíciles y puestas a punto. Valoramos contigo el estado y las horas necesarias.</p></header>
-      <div class="hard-grid"><img src="assets/piso-desordenado.jpg" alt="Piso que necesita una puesta a punto"><img src="assets/bano-antes.jpg" alt="Baño que necesita limpieza intensiva"><img src="assets/cocina-intensiva.jpg" alt="Cocina que necesita limpieza intensiva"></div>
-      <small class="disclaimer">Imágenes orientativas de tipos de espacios y necesidades de limpieza.</small>
-    </section>
-
-    <section class="quote" id="presupuesto">
-      <div><span class="eyebrow light">SOLICITA PRESUPUESTO</span><h2>¿Cuántas horas<br><em>necesitas?</em></h2><p>No hace falta que lo sepas exacto. Danos una idea y María te ayuda a organizar el servicio.</p>
-        <div class="maria"><span>M</span><div><b>María</b><small>WhatsApp · +34 641 16 71 55</small></div><button class="js-maria" type="button">Hablar ahora</button></div>
-      </div>
-      <form id="quote-form">
-        <div class="form-heading"><span>🧽</span><div><b>Cuéntale a María qué necesitas</b><small>Te preparamos el mensaje completo.</small></div></div>
-        <div class="form-row"><label>¿Quién contrata?<select name="clientType" required><option value="">Elige una opción</option><option>Particular</option><option>Empresa</option><option>Hotel / hostal</option><option>Administrador / comunidad</option></select></label><label>Nombre / empresa<input name="clientName" required placeholder="Tu nombre o empresa"></label></div>
-        <label>Teléfono de contacto<input type="tel" name="phone" required placeholder="Ej. +34 600 000 000" autocomplete="tel"></label>
-        <label>¿Qué quieres limpiar?<select name="space" required><option value="">Elige una opción</option><option>Casa o piso</option><option>Hotel</option><option>Hostal</option><option>Piso de estudiantes</option><option>Apartamento / estancia</option><option>Limpieza intensiva</option></select></label>
-        <div class="form-row"><label>Tamaño aproximado<select name="size"><option>No lo sé</option><option>Menos de 50 m²</option><option>50–90 m²</option><option>90–150 m²</option><option>Más de 150 m²</option><option>Varias habitaciones / zonas</option></select></label><label>Zona de Madrid<input name="zone" required placeholder="Ej. Aluche, Centro, Getafe..."></label></div>
-        <div class="form-row"><label>Frecuencia<select name="frequency" required><option>Una vez</option><option>Semanal</option><option>Quincenal</option><option>Varias veces al mes</option><option>A convenir</option></select></label><label>Horas aproximadas<select name="hours" required><option>2 horas</option><option selected>3 horas</option><option>4 horas</option><option>5 horas</option><option>6+ horas</option><option>No lo sé</option></select></label></div>
-        <div class="form-row"><label>Fecha preferida<input type="date" name="date"></label><label>Productos y material<select name="supplies"><option>Que los lleve Limpiezas Megret</option><option>Ya tengo productos</option><option>A convenir con María</option></select></label></div>
-        <label>Cuéntanos qué necesitas<textarea name="details" rows="4" placeholder="Habitaciones, baños, cocina, mascotas, acceso, necesidades especiales..."></textarea></label>
-        <button class="submit" type="submit">Continuar por WhatsApp con María →</button>
-        <small>Revisarás el mensaje antes de abrir WhatsApp. Sin compromiso.</small>
+    <section class="booking" id="reservar">
+      <div class="booking-copy"><span class="eyebrow light">RESERVA RÁPIDA</span><h2>Cuéntanos qué<br><em>necesitas.</em></h2><p>Guardaremos la solicitud en tu perfil y prepararemos el mensaje para María por WhatsApp.</p><div class="maria-card"><span>M</span><div><b>María</b><small>Responsable · Limpiezas Megret</small></div><button class="js-whatsapp" type="button">Hablar ahora</button></div></div>
+      <form id="booking-form" class="glass-form">
+        <div class="form-title"><span>🧼</span><div><b>Nueva solicitud</b><small>Se completa en menos de 2 minutos</small></div></div>
+        <div class="two"><label>Tipo de cliente<select name="clientType" required><option value="Particular">Particular</option><option value="Empresa">Empresa</option><option value="Alojamiento">Hotel / hostal / apartamento</option></select></label><label>Tipo de espacio<select name="space" required><option>Casa o piso</option><option>Hotel o hostal</option><option>Apartamento turístico</option><option>Oficina o local</option><option>Piso de estudiantes</option><option>Limpieza intensiva</option></select></label></div>
+        <div class="two"><label>Fecha preferida<input type="date" name="date"></label><label>Horas aproximadas<select name="hours"><option>No lo sé</option><option>2 horas</option><option>3 horas</option><option>4 horas</option><option>5 horas o más</option></select></label></div>
+        <label>Zona o dirección<input name="address" placeholder="Ej.: Aluche, Madrid" required></label>
+        <label>Detalles<textarea name="details" rows="4" placeholder="Habitaciones, baños, mascotas, limpieza especial..."></textarea></label>
+        <button class="button primary full" type="submit">Guardar y enviar a María →</button>
+        <small>Al continuar se guarda una copia en este dispositivo y se abre WhatsApp para enviarla.</small>
       </form>
     </section>
 
-    <section class="work section" id="trabajo">
-      <div class="work-copy"><span class="eyebrow">TRABAJA CON NOSOTROS</span><h2>¿Buscas trabajo<br>de limpieza en <em>Madrid?</em></h2><p>Queremos conocer personas responsables, con ganas de trabajar y cuidar los espacios. Si tienes experiencia, genial. Si estás empezando, también puedes presentarte.</p><ul><li>✓ Cuéntanos tu experiencia</li><li>✓ Indica tu disponibilidad</li><li>✓ Dinos por qué zona de Madrid te mueves</li></ul><img src="assets/material-limpieza.jpg" alt="Material de limpieza preparado"></div>
-      <form id="job-form"><span class="job-tag">👋 HOLA, FUTURO EQUIPO</span><h3>Envíale tu candidatura a María</h3><div class="form-row"><label>¿Cómo te presentas?<select name="candidateType" required><option>Persona particular</option><option>Autónomo/a</option><option>Empresa / equipo</option></select></label><label>Nombre / equipo<input name="name" required placeholder="Tu nombre"></label></div><label>Teléfono de contacto<input type="tel" name="phone" required placeholder="Ej. +34 600 000 000" autocomplete="tel"></label><div class="form-row"><label>Zona donde vives<input name="area" required placeholder="Ej. Usera, Latina, Getafe..."></label><label>Experiencia<select name="experience"><option>Estoy empezando</option><option>Menos de 1 año</option><option>1–3 años</option><option>Más de 3 años</option></select></label></div><div class="form-row"><label>¿Qué te interesa?<select name="preference"><option>Casas y pisos</option><option>Hoteles / hostales</option><option>Apartamentos</option><option>Me adapto a todo</option></select></label><label>Disponibilidad<select name="availability"><option>Mañanas</option><option>Tardes</option><option>Mañanas y tardes</option><option>Fines de semana</option><option>Flexible / a convenir</option></select></label></div><label>¿Puedes desplazarte por Madrid?<select name="travel"><option>Sí</option><option>Sí, con límites de zona</option><option>No, prefiero mi zona</option></select></label><label>Cuéntale algo más a María<textarea name="details" rows="4" placeholder="Días disponibles, experiencia concreta, zonas a las que puedes ir..."></textarea></label><button class="submit dark-submit" type="submit">Enviar candidatura por WhatsApp →</button><small>Revisarás el mensaje antes de abrir el WhatsApp de María.</small></form>
-    </section>
+    <section class="section testimonials" id="opiniones"><header class="center-heading"><span class="eyebrow">CONFIANZA Y CERCANÍA</span><h2>Un servicio que se siente<br><em>como un alivio.</em></h2></header><div class="testimonial-grid"><article><div>★★★★★</div><p>“Muy fácil hablar con María y organizar las horas. Todo quedó perfecto.”</p><b>Cliente particular</b></article><article><div>★★★★★</div><p>“Nos ayudaron con una puesta a punto completa y el proceso fue muy claro.”</p><b>Apartamento en Madrid</b></article><article><div>★★★★★</div><p>“Poder guardar la solicitud y volver a verla es comodísimo.”</p><b>Cliente recurrente</b></article></div></section>
 
-    <section class="gallery section">
-      <header class="section-head"><div><span class="eyebrow">ESPACIOS</span><h2>De “uf…” a <em>qué gusto.</em></h2></div><p>Casas, habitaciones, baños, cocinas y alojamientos: cada espacio pide una atención distinta.</p></header>
-      <div class="gallery-grid">
-        <figure><img src="assets/bano-collage.jpg" alt="Baños y duchas"><figcaption>Baños y duchas ✦</figcaption></figure>
-        <figure><img src="assets/bano-moderno.jpg" alt="Baño moderno"><figcaption>Acabados cuidados ✦</figcaption></figure>
-        <figure><img src="assets/limpieza-cristal.jpg" alt="Limpieza de superficies"><figcaption>Superficies ✦</figcaption></figure>
-        <figure><img src="assets/limpieza-suelo.jpg" alt="Limpieza de suelo"><figcaption>Limpieza a fondo ✦</figcaption></figure>
-        <figure><img src="assets/cocina-antes.jpg" alt="Cocina que necesita una puesta a punto"><figcaption>Puestas a punto ✦</figcaption></figure>
-      </div>
-    </section>
+    <section class="work-section" id="trabajo"><div><span class="eyebrow">TRABAJA CON NOSOTROS</span><h2>¿Te gusta dejar<br><em>todo impecable?</em></h2><p>Envíanos tus datos y tu disponibilidad. La candidatura quedará guardada en tu espacio.</p></div><form id="job-form" class="simple-form"><div class="two"><label>Nombre<input name="name" required></label><label>Teléfono<input name="phone" inputmode="tel" required></label></div><label>Zona de Madrid<input name="area" required></label><div class="two"><label>Experiencia<select name="experience"><option>Sin experiencia profesional</option><option>Menos de 1 año</option><option>1–3 años</option><option>Más de 3 años</option></select></label><label>Disponibilidad<select name="availability"><option>Mañanas</option><option>Tardes</option><option>Fines de semana</option><option>Disponibilidad completa</option></select></label></div><label>Cuéntanos algo sobre ti<textarea name="details" rows="4"></textarea></label><button class="button dark full" type="submit">Enviar candidatura →</button></form></section>
 
-    <section class="final"><span>✦ LIMPIEZAS MEGRET · MADRID</span><h2>Menos tiempo limpiando.<br><em>Más tiempo viviendo.</em></h2><button class="pill dark js-maria" type="button">Hablar con María →</button></section>
+    <section class="final-cta" id="contacto"><span>¿TIENES UNA DUDA?</span><h2>Habla directamente<br>con María.</h2><button class="button dark js-whatsapp" type="button">Abrir WhatsApp →</button></section>
   </main>
 
-  <footer><a class="brand" href="#inicio"><span class="mark">LM<i>✦</i></span><span><small>LIMPIEZAS</small><b>MEGRET</b></span></a><p>Servicios de limpieza por horas en Madrid · WhatsApp de María: <a href="https://wa.me/34641167155" target="_blank" rel="noopener">+34 641 16 71 55</a></p><div><a href="#servicios">Servicios</a><a href="#consejos">Consejos</a><a href="#presupuesto">Presupuesto</a><a href="#trabajo">Empleo</a></div><small>© <span id="year"></span> Limpiezas Megret</small></footer>
+  <footer><a class="brand" href="#inicio"><span class="brand-mark">LM</span><span><b>Limpiezas</b><strong>Megret</strong></span></a><p>Servicio de limpieza profesional en Madrid.</p><small>© <span id="year"></span> Limpiezas Megret · Los datos del perfil se guardan localmente en tu dispositivo.</small></footer>
 
-  <button class="chat js-maria" type="button" aria-label="Hablar con María">💬 <b>María</b></button>
-  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
-    <header><div><small>TIENDA MEGRET</small><h3>Tu carrito 🛒</h3></div><button id="close-cart" type="button" aria-label="Cerrar carrito">×</button></header>
-    <div id="cart-items" class="cart-items"><p class="empty-cart">Todavía no has añadido ningún pack.</p></div>
-    <div class="cart-footer"><p>El precio final se confirma contigo antes del pedido.</p><button id="cart-order" type="button">Pedir estos packs a María →</button></div>
+  <button class="chat-button js-whatsapp" type="button">💬 <span>Hablar con María</span></button>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="account-panel" id="account-panel" aria-hidden="true">
+    <header><div><span class="panel-kicker">MI ESPACIO MEGRET</span><h2 id="account-title">Tu perfil</h2></div><button class="close-button" id="close-account" type="button">×</button></header>
+    <div id="account-content"></div>
   </aside>
-  <div class="modal" id="contact-modal" hidden>
-    <section role="dialog" aria-modal="true" aria-labelledby="contact-title"><button class="close" id="close-contact" type="button" aria-label="Cerrar">×</button><header><span class="avatar">M</span><div><small>CONTACTO DIRECTO · WHATSAPP</small><h3 id="contact-title">Habla con María</h3><p>+34 641 16 71 55 · Limpiezas Megret</p></div></header><label>Tu mensaje<textarea id="contact-message" rows="9">Hola María, me gustaría pedir información sobre Limpiezas Megret.</textarea></label><button class="submit" id="send-contact" type="button">Abrir WhatsApp de María →</button><p class="notice" id="contact-notice" hidden></p></section>
-  </div>
-  <script src="app.js?v=1.0"></script>
+
+  <div class="modal" id="profile-modal" hidden><section><button class="close-button" id="close-profile" type="button">×</button><span class="panel-kicker">CREAR PERFIL</span><h2>Solo lo esencial.</h2><p>Guarda tus datos para no repetirlos en cada solicitud.</p><form id="profile-form"><label>Nombre completo<input name="name" autocomplete="name" required></label><div class="two"><label>Teléfono<input name="phone" inputmode="tel" autocomplete="tel" required></label><label>Correo electrónico<input type="email" name="email" autocomplete="email"></label></div><label>Dirección o zona habitual<input name="address" autocomplete="street-address" placeholder="Ej.: Aluche, Madrid"></label><label>Tipo de cuenta<select name="type"><option>Particular</option><option>Empresa</option><option>Alojamiento</option><option>Profesional de limpieza</option></select></label><button class="button primary full" type="submit">Guardar mi perfil</button><small>No pedimos contraseña. Los datos quedan guardados únicamente en este navegador.</small></form></section></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
